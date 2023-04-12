@@ -1,0 +1,39 @@
+@use '../base/mixins' as m;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;  
+
+  &__link {
+    position: relative;
+    color: white; 
+    transition: color 250ms ease-in-out;
+
+    &::before {
+      position: absolute; 
+      content: ""; 
+      left: 0;
+      margin-top: 2.6rem;
+      width: 0;
+      height: 0.2rem;
+      background-color: white;
+      transition: width 250ms ease-in-out;
+    }
+
+    &:hover {
+      color: darken($color: white, $amount: 5);
+
+      &::before {
+        width: 100%;
+      }
+    }    
+  }  
+
+  @include m.tablet {
+    &__link {
+      font-size: 2rem;
+    }
+  }
+}
+

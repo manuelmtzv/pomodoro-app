@@ -1,0 +1,36 @@
+
+.button-layout__button {  
+  flex: 1;
+  font-size: 2.4rem;
+  border-radius: 5px;
+  border: none; 
+  padding: 1.8rem 0;
+  background-color: red;
+  color: white; 
+  cursor: pointer;    
+  transition: background-color 250ms ease-in-out;   
+
+  &--start {
+    background-color: blue;  
+
+    &:hover {
+      background-color: darken($color: blue, $amount: 5);
+    }
+  }
+
+  &--pause {
+    background-color: green;
+
+    &:hover {
+      background-color: darken($color: green, $amount: 5);
+    }
+  }
+
+  &--reset {
+    grid-column: 1 / 3;   
+    
+    &:hover {
+      background-color: darken($color: red, $amount: 5);
+    }
+  }  
+}

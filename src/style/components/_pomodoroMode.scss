@@ -1,0 +1,20 @@
+@use '../base/mixins' as m;
+
+.pomodoro-mode {
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 500;    
+  }
+
+  @include m.tablet {
+    &__title {
+      font-size: 3.8rem;
+    }
+  }
+
+  @include m.desktop {
+    &__title {
+      font-size: 4.2rem;
+    }
+  }
+}

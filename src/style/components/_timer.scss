@@ -1,0 +1,13 @@
+@use '../base/mixins' as m;
+
+.timer {
+  font-size: 6rem;
+
+  @include m.tablet {
+    font-size: 8rem;
+  }
+
+  @include m.large-desktop {
+    font-size: 10rem;
+  }
+}

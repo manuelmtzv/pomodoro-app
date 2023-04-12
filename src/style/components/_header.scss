@@ -1,0 +1,29 @@
+@use '../base/mixins' as m;
+
+.header {
+  background-color: red;  
+  padding: 3rem 0;  
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;  
+  
+    width: 90%;
+    margin: 0 auto;
+
+    @include m.phone {
+      flex-direction: row;
+      width: 85%;
+    }
+
+    @include m.tablet {
+      flex-direction: row;
+      width: 80%;
+    }
+  }
+}
+
